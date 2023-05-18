@@ -1,0 +1,8 @@
+<p>employee-list works!</p>
+<button (click)="addNewEmployee()">Add New Employee</button>
+<!-- {{empList | json}} -->
+<ul>
+    <li *ngFor="let e of empList">
+       <app-employee-details (deleteEmployee)="deleteEmployee(e.id)" [employee]="e"></app-employee-details>
+    </li>
+</ul>
